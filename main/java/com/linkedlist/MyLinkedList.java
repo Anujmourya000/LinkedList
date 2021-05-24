@@ -9,6 +9,9 @@ public class MyLinkedList {
         this.tail = null;
     }
 
+    /**
+     * add Method to add the nodes in sequence
+     */
     public void add(INode newNode) {
         if(this.tail == null) {
             this.tail = newNode;
@@ -23,6 +26,9 @@ public class MyLinkedList {
         }
     }
 
+    /**
+     * append Method to append the nodes in sequence
+     */
     public void append(INode myNode){
         if(this.head == null){
             this.head = myNode;
@@ -36,6 +42,18 @@ public class MyLinkedList {
         }
     }
 
+    /**
+     * insert Method to insert the nodes in between other nodes
+     */
+    public void insert(INode myNode, INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
+
+    /**
+     * Print Method to print the nodes in sequence
+     */
     public void printMyNode() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
