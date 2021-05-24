@@ -61,6 +61,19 @@ public class MyLinkedList {
     }
 
     /**
+     * Pop Method to delete the Last elements from sequence
+     */
+    public INode popLast() {
+        INode tempNode = head;
+        while (!tempNode.getNext().equals(tail)) {
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        tempNode = null;
+        return tempNode;
+    }
+
+    /**
      * Print Method to print the nodes in sequence
      */
     public void printMyNode() {

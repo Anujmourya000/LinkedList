@@ -80,4 +80,23 @@ public class MyLinkedListTest {
         boolean result = myLinkedList.head.equals(mySecondNode) && myLinkedList.tail.equals(myThirdNode);
         Assertions.assertTrue(result);
     }
+
+    /**
+     * Test case Method to delete the Last elements from sequence
+     */
+    @Test
+    public void given_3Numbers_When_Delete_The_Last_Elements_From_LinkedList_() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNode();
+        myLinkedList.popLast();
+        myLinkedList.printMyNode();
+        boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.tail.equals(mySecondNode);
+        Assertions.assertTrue(result);
+    }
 }
