@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MyNodeTest {
-
+    /**
+     * Test cases where we get the nodes values stored
+     */
     @Test
     public void given_3_Number_When_Linked_Should_Passed_LinkedList_Test() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);

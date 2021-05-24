@@ -1,5 +1,8 @@
 package com.linkedlist;
-
+/**
+ * MyNode class is Generic type which contains various
+ * get and set methods
+ */
 public class MyNode<K> {
     public static void main(String[] args) {
         System.out.println("Welcome");
