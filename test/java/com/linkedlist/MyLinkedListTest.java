@@ -62,4 +62,22 @@ public class MyLinkedListTest {
         Assertions.assertTrue(result);
     }
 
+    /**
+     * Test case Method to delete the first elements from sequence
+     */
+    @Test
+    public void given_3Numbers_When_Delete_The_First_Elements_From_LinkedList_() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNode();
+        myLinkedList.pop();
+        myLinkedList.printMyNode();
+        boolean result = myLinkedList.head.equals(mySecondNode) && myLinkedList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
 }

@@ -52,6 +52,15 @@ public class MyLinkedList {
     }
 
     /**
+     * Pop Method to delete the first elements from sequence
+     */
+    public INode pop() {
+        INode  tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
+    }
+
+    /**
      * Print Method to print the nodes in sequence
      */
     public void printMyNode() {
