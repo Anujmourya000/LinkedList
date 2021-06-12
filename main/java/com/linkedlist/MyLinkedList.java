@@ -74,6 +74,17 @@ public class MyLinkedList {
     }
 
     /**
+     * search Method to search the nodes
+     */
+    public INode search(INode myNode){
+        INode tempNode = head;
+        while (tempNode.getNext()!=myNode){
+            tempNode=tempNode.getNext();
+        }
+        return tempNode.getNext();
+    }
+
+    /**
      * Print Method to print the nodes in sequence
      */
     public void printMyNode() {

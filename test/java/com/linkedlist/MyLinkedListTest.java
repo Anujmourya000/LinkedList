@@ -99,4 +99,20 @@ public class MyLinkedListTest {
         boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.tail.equals(mySecondNode);
         Assertions.assertTrue(result);
     }
+
+    /**
+     * Test case Method to search the elements of key passed
+     */
+    @Test
+    public void given_3Numbers_When_Searched_Key_Should_Pass_The_LinkedList() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNode();
+        Assertions.assertEquals(30, myLinkedList.search(mySecondNode).getKey());
+    }
 }
